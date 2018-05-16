@@ -21,6 +21,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -78,9 +79,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Bullet3\src\BulletCollision\BulletCollision.vcxproj">
       <Project>{d4862e96-d3e3-3c19-b65a-93fdf4f736d6}</Project>
     </ProjectReference>
@@ -90,6 +88,23 @@
     <ProjectReference Include="..\..\..\Bullet3\src\LinearMath\LinearMath.vcxproj">
       <Project>{72f280f6-8bf1-3e4a-8e42-9e833ece6e79}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BasicDemo.h" />
+    <ClInclude Include="BulletOpenGLApplication.h" />
+    <ClInclude Include="CollisionFilteringDemo.h" />
+    <ClInclude Include="DebugDrawer.h" />
+    <ClInclude Include="FreeGLUTCallbacks.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="OpenGLMotionState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BasicDemo.cpp" />
+    <ClCompile Include="BulletOpenGLApplication.cpp" />
+    <ClCompile Include="CollisionFilteringDemo.cpp" />
+    <ClCompile Include="DebugDrawer.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
